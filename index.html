@@ -1,0 +1,4243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Lego Digital Designer</title>
+
+		<style type="text/css">
+
+			div
+			{
+			    font-family:arial,sans-serif;
+			    font-size: 11px;
+			    color:#000000;
+			}
+
+			.header
+			{
+			    width:1024px;
+			    background-image:url('ganesha/Images/Header.png');
+			    background-repeat:repeat-x;
+			    background-color: #000000;
+			    height:40px;
+			    padding-left:10px;
+			}
+
+            .headerPrint
+			{
+			    display:none;
+			}
+
+			.footer
+			{
+			    font-size:10px;
+			    text-align:center;
+			    width:1024px;
+			}
+
+			.nav
+			{
+			    text-align:center;
+			    width:1024px;
+			}
+
+			.step
+			{
+			    display:none;
+			}
+
+			.stepdisplay
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			}
+
+			.modelParts
+			{
+			    list-style-type:none;
+			    padding:4px 0px 0px 0px;
+			    margin:0px;
+			}
+			.modelParts ul
+			{
+			    list-style-type:none;
+			    float:left;
+			    padding:5px 0px 0px 5px;
+			    width:140px;
+			    border:1px dotted gray;
+			    margin:0px
+			 }
+			.modelParts ul li
+			{
+			    padding:0px;
+			    margin:0px
+			}
+			.modelParts ul li img
+			{
+			    padding:0px;
+			    height:64px;
+			    width:64px;
+			    margin-left:15px
+			}
+
+			.stepTextTop p
+			{
+			    margin:0px;
+			    padding:10px 0px 0px 0px;
+			 }
+			.stepText p
+			{
+			    margin:0px;
+			    width:30px;
+			    padding:25px 0px 0px 10px;
+			}
+
+            .biElement
+            {
+                float:left;
+                margin:20px;
+                width:280px;
+
+            }
+
+            .stepelements
+            {
+                width:1024px;
+			    height:620px;
+                overflow:auto;
+            }
+
+
+		</style>
+
+        <style type="text/css" media="print">
+            .nav
+			{
+			    display:none;
+			}
+
+			.stepdisplay
+			{
+			    display:none;
+			}
+
+            .stepelements
+			{
+			    display:none;
+			}
+
+            .header
+			{
+			    display:none;
+			}
+
+            .headerPrint
+			{
+			    display:block;
+			}
+
+			.step
+			{
+			    display:block;
+			    width:1024px;
+			    height:620px;
+			    page-break-after:always;
+			}
+
+            .biElement
+            {
+                width:280px;
+            }
+
+        </style>
+
+        <script language="javascript" type="text/javascript">
+
+            var biCurStep=0;
+
+            function returnTest(e) {
+                var keynum = 0;
+                if (window.event) {
+                    keynum = e.keyCode
+                }
+                else if (e.which) {
+                    keynum = e.which
+                }
+                if (keynum == 13)
+                {
+                    try {
+                        biStep(parseInt(window.document.getElementById('stepNumber').value,10));
+                    }
+                    catch(err) {
+                        biStep(0);
+                    }
+                }
+            }
+
+            function biStep(step) {
+
+                if (step>144+1) step=144+1;
+                if (step<0) step=0;
+
+                for (var i=0;i<144+2;i++) {
+                    var id='step_' + i.toString();
+                    var cn='stepdisplay';
+                    if (i==144+1) {
+                        cn='stepelements';
+                        id='step_elements';
+                    }
+
+                    if (i==step) {
+                        window.document.getElementById('step_display').innerHTML=window.document.getElementById(id).innerHTML;
+						   window.document.getElementById('step_display').className=cn;
+                    }
+                }
+                window.document.getElementById('stepNumber').value=step.toString();
+                biCurStep=step;
+            }
+        </script>
+	</head>
+	<body onload="biStep(0)">
+        <div class="header"><img src="ganesha/Images/Logo.png" /></div>
+        <div class="headerPrint"><img src="ganesha/Images/Header_print.png" /></div>
+
+        <div class="stepdisplay" id="step_display"></div>
+
+        <div class="step" id="step_0">
+            <div style="float:left;width:150px"><p>Model Name:<br /><span style="font-weight:bold">ganesha</span><br /><br />Number of Bricks: <span style="font-weight:bold">466</span></p></div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step144.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+
+        <div class="step" id="step_1">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 1 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick0.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick1.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick2.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step1.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_2">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 2 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick3.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick4.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick5.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step2.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_3">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 3 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick6.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick7.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick8.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step3.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_4">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 4 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick10.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step4.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_5">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 5 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step5.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_6">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 6 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick13.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick14.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step6.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_7">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 7 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick15.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick10.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick17.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step7.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_8">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 8 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick13.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick14.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step8.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_9">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 9 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick18.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick17.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick19.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step9.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_10">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 10 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick20.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick21.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step10.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_11">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 11 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick10.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step11.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_12">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 12 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick23.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step12.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_13">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 13 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick24.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick25.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick10.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step13.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_14">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 14 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick27.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step14.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_15">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 15 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick28.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick29.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick30.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step15.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_16">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 16 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick15.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step16.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_17">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 17 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick23.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick21.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick29.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step17.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_18">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 18 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick29.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick34.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step18.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_19">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 19 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick4.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick12.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick27.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step19.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_20">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 20 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick35.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick19.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step20.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_21">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 21 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick36.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick37.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step21.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_22">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 22 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick38.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick39.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick40.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick41.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step22.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_23">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 23 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick42.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick43.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick44.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step23.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_24">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 24 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick45.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick46.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick30.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step24.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_25">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 25 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick7.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick47.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step25.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_26">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 26 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick48.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick49.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick7.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick17.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step26.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_27">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 27 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick50.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick49.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step27.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_28">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 28 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick51.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick45.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick52.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick30.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step28.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_29">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 29 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick45.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick16.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step29.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_30">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 30 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick53.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick7.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick47.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step30.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_31">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 31 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick52.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick55.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step31.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_32">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 32 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step32.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_33">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 33 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick48.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick42.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step33.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_34">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 34 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick59.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick60.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick53.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step34.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_35">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 35 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick61.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step35.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_36">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 36 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick13.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step36.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_37">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 37 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick45.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick46.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step37.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_38">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 38 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick15.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick17.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick11.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step38.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_39">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 39 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick22.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick49.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick7.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step39.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_40">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 40 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick62.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step40.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_41">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 41 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick63.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step41.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_42">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 42 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick62.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick64.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick36.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step42.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_43">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 43 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick60.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick64.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick36.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick65.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step43.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_44">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 44 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick50.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick62.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick42.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step44.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_45">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 45 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick45.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick13.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick46.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step45.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_46">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 46 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick66.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick50.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick67.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step46.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_47">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 47 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick63.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick62.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step47.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_48">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 48 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick50.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step48.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_49">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 49 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick67.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick69.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step49.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_50">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 50 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick72.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick67.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step50.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_51">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 51 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step51.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_52">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 52 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick62.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick73.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick9.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step52.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_53">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 53 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick74.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick75.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step53.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_54">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 54 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick76.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step54.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_55">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 55 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick36.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step55.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_56">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 56 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick77.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step56.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_57">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 57 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick77.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step57.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_58">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 58 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick77.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step58.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_59">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 59 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick77.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step59.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_60">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 60 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step60.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_61">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 61 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick65.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step61.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_62">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 62 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick78.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick36.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step62.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_63">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 63 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step63.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_64">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 64 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick79.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick80.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step64.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_65">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 65 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step65.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_66">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 66 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick81.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step66.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_67">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 67 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick82.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick83.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick84.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step67.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_68">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 68 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step68.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_69">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 69 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step69.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_70">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 70 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick76.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step70.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_71">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 71 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick18.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick85.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step71.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_72">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 72 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick86.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick87.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick88.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick89.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step72.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_73">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 73 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick86.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick88.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step73.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_74">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 74 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick91.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step74.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_75">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 75 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick24.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step75.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_76">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 76 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick92.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step76.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_77">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 77 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick94.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick95.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step77.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_78">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 78 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick96.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step78.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_79">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 79 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step79.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_80">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 80 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick56.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step80.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_81">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 81 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick54.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick57.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step81.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_82">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 82 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step82.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_83">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 83 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick24.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step83.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_84">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 84 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick97.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick92.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick94.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick98.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step84.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_85">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 85 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick83.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick91.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick95.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step85.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_86">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 86 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick99.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick98.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step86.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_87">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 87 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick98.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step87.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_88">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 88 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick98.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick100.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step88.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_89">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 89 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick96.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step89.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_90">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 90 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick100.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick101.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step90.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_91">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 91 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step91.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_92">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 92 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick102.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick103.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick96.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick104.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step92.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_93">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 93 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick103.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step93.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_94">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 94 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick103.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step94.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_95">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 95 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick30.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step95.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_96">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 96 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick92.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick105.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick30.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick106.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step96.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_97">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 97 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step97.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_98">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 98 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step98.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_99">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 99 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick75.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step99.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_100">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 100 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step100.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_101">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 101 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step101.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_102">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 102 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step102.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_103">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 103 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick110.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step103.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_104">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 104 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick31.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick91.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step104.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_105">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 105 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick99.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step105.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_106">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 106 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step106.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_107">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 107 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step107.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_108">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 108 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick111.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step108.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_109">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 109 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step109.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_110">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 110 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick83.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick112.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step110.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_111">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 111 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick113.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick114.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step111.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_112">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 112 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick115.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick91.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick116.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step112.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_113">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 113 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick117.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step113.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_114">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 114 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick118.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step114.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_115">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 115 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step115.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_116">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 116 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step116.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_117">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 117 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step117.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_118">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 118 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick83.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick112.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick114.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step118.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_119">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 119 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick71.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick113.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step119.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_120">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 120 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick90.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick115.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick91.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick116.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step120.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_121">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 121 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick117.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step121.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_122">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 122 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick119.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step122.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_123">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 123 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick107.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step123.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_124">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 124 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick109.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick120.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step124.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_125">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 125 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step125.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_126">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 126 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick5.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick99.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick121.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step126.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_127">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 127 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick33.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step127.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_128">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 128 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick75.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step128.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_129">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 129 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step129.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_130">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 130 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick123.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick124.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick26.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step130.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_131">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 131 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick96.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step131.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_132">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 132 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick60.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step132.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_133">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 133 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick93.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick99.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick123.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step133.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_134">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 134 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick58.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick75.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick124.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step134.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_135">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 135 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick96.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick68.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step135.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_136">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 136 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick70.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick108.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step136.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_137">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 137 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>2 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick83.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick32.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step137.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_138">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 138 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick125.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick115.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick126.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step138.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_139">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 139 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick122.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick127.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick128.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick129.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step139.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_140">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 140 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>4 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick127.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step140.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_141">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 141 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>3 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick127.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick130.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step141.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_142">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 142 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick131.png" /></li>
+							<li class="stepText"><p>1 x</p></li>
+							<li><img height="64" width="64" src="ganesha/Brick132.png" /></li>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step142.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_143">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 143 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step143.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="step" id="step_144">
+            <div style="float:left">
+                <div class="stepTextTop"><p><span style="font-weight:bold">Step 144 of 144</span></p></div>
+				<div class="modelParts">
+					<ul>
+
+					</ul>
+				</div>
+            </div>
+            <div style="float:left"><img height="600" width="800" src="ganesha/Step144.png" /></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div class="step" id="step_elements">
+            				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick86.png" /></td>
+					        <td>300501</td>
+					        <td>BRICK 1X1 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick82.png" /></td>
+					        <td>300521</td>
+					        <td>BRICK 1X1 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick18.png" /></td>
+					        <td>300523</td>
+					        <td>BRICK 1X1 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick35.png" /></td>
+					        <td>4121739</td>
+					        <td>BRICK 1X2 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick31.png" /></td>
+					        <td>300423</td>
+					        <td>BRICK 1X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>9&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick90.png" /></td>
+					        <td></td>
+					        <td>BRICK 1X2 WITHOUT PIN - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick66.png" /></td>
+					        <td></td>
+					        <td>BRICK 1X2 WITHOUT PIN - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick51.png" /></td>
+					        <td>4118787</td>
+					        <td>BRICK 1X3 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick24.png" /></td>
+					        <td>362223</td>
+					        <td>BRICK 1X3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick23.png" /></td>
+					        <td>4153825</td>
+					        <td>BRICK 2X2 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick83.png" /></td>
+					        <td>300323</td>
+					        <td>BRICK 2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick97.png" /></td>
+					        <td>301021</td>
+					        <td>BRICK 1X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick3.png" /></td>
+					        <td>4118827</td>
+					        <td>BRICK 1X4 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick79.png" /></td>
+					        <td>301023</td>
+					        <td>BRICK 1X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick59.png" /></td>
+					        <td>300221</td>
+					        <td>BRICK 2X3 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick15.png" /></td>
+					        <td>4125971</td>
+					        <td>BRICK 2X3 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick48.png" /></td>
+					        <td>300223</td>
+					        <td>BRICK 2X3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick4.png" /></td>
+					        <td>4125974</td>
+					        <td>BRICK 1X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick38.png" /></td>
+					        <td>300121</td>
+					        <td>BRICK 2X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick20.png" /></td>
+					        <td>3001106</td>
+					        <td>BRICK 2X4 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick60.png" /></td>
+					        <td>300123</td>
+					        <td>BRICK 2X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick80.png" /></td>
+					        <td>300823</td>
+					        <td>BRICK 1X8 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick0.png" /></td>
+					        <td>4294622</td>
+					        <td>BRICK 1X10 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick87.png" /></td>
+					        <td>245621</td>
+					        <td>BRICK 2X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick12.png" /></td>
+					        <td>2456106</td>
+					        <td>BRICK 2X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick5.png" /></td>
+					        <td>245623</td>
+					        <td>BRICK 2X6 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick78.png" /></td>
+					        <td>300721</td>
+					        <td>BRICK 2X8 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick53.png" /></td>
+					        <td>6037384</td>
+					        <td>BRICK 2X8 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick6.png" /></td>
+					        <td>300621</td>
+					        <td>BRICK 2X10 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick131.png" /></td>
+					        <td>4185784</td>
+					        <td>FINAL BRICK 2X2 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick125.png" /></td>
+					        <td>4124174</td>
+					        <td>TECHNIC BRICK 4X4 ROUND - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick107.png" /></td>
+					        <td>407023</td>
+					        <td>ANGULAR BRICK 1X1 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>13&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick70.png" /></td>
+					        <td>4583862</td>
+					        <td>BRICK 1X1 W. 1 KNOB - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick77.png" /></td>
+					        <td>4140704</td>
+					        <td>BRICK 1X2 FRIC/STUB/FORK VERT. - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick115.png" /></td>
+					        <td>370023</td>
+					        <td>TECHNIC BRICK 1X2, Ø4.9 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick61.png" /></td>
+					        <td>4112930</td>
+					        <td>BRICK 1X2 WITH CROSS HOLE - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>11&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick93.png" /></td>
+					        <td>4277780</td>
+					        <td>ROOF TILE 1X1X2/3, PC - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick112.png" /></td>
+					        <td>4550348</td>
+					        <td>ROOF TILE 1 X 2 X 2/3, ABS - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick91.png" /></td>
+					        <td>4651236</td>
+					        <td>ROOF TILE 1 X 2 X 2/3, ABS - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick102.png" /></td>
+					        <td>304823</td>
+					        <td>END RIDGED TILE 1X2/45° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>7&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick103.png" /></td>
+					        <td>4295174</td>
+					        <td>END RIDGED TILE 1X2/45° - Warm Gold</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick96.png" /></td>
+					        <td>4620297</td>
+					        <td>ROOF TILE 1X2 45° W 1/3 PLATE - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick45.png" /></td>
+					        <td>4118901</td>
+					        <td>ROOF TILE 1X2/45° - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick92.png" /></td>
+					        <td>304023</td>
+					        <td>ROOF TILE 1X2/45° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick21.png" /></td>
+					        <td>4121740</td>
+					        <td>ROOF TILE 1X2 INV. - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick99.png" /></td>
+					        <td>366523</td>
+					        <td>ROOF TILE 1X2 INV. - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick94.png" /></td>
+					        <td>428623</td>
+					        <td>ROOF TILE 1X3/25° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick25.png" /></td>
+					        <td>428723</td>
+					        <td>ROOF TILE 1X3/25° INV. - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick22.png" /></td>
+					        <td>4118828</td>
+					        <td>ROOF TILE 2X2/45° - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick104.png" /></td>
+					        <td>303923</td>
+					        <td>ROOF TILE 2X2/45° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick50.png" /></td>
+					        <td>4118936</td>
+					        <td>CORNER BRICK 2X2/45° OUTSIDE - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick13.png" /></td>
+					        <td>4118829</td>
+					        <td>ROOF TILE 2X2/45 INV. - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>9&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick71.png" /></td>
+					        <td>366023</td>
+					        <td>ROOF TILE 2X2/45 INV. - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick105.png" /></td>
+					        <td>329823</td>
+					        <td>ROOF TILE 2X3/25° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick84.png" /></td>
+					        <td>374723</td>
+					        <td>ROOF TILE 2X3/25° INV. - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick88.png" /></td>
+					        <td>367823</td>
+					        <td>ROOF TILE 2X2X2/65 DEG. - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick89.png" /></td>
+					        <td>303723</td>
+					        <td>ROOF TILE 2X4/45° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick95.png" /></td>
+					        <td>4124107</td>
+					        <td>ROOF TILE 2X4X1, 18° - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick56.png" /></td>
+					        <td>609101</td>
+					        <td>BRICK W. ARCH 1X1X1 1/3 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>11&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick54.png" /></td>
+					        <td>609123</td>
+					        <td>BRICK W. ARCH 1X1X1 1/3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick76.png" /></td>
+					        <td>4649773</td>
+					        <td>PLATE W. BOW 1X4X2/3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick122.png" /></td>
+					        <td>4543998</td>
+					        <td>BRICK W/BOW 1/3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick63.png" /></td>
+					        <td>621523</td>
+					        <td>BRICK 2X3 W. ARCH - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>20&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick109.png" /></td>
+					        <td>307023</td>
+					        <td>FLAT TILE 1X1 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick123.png" /></td>
+					        <td>302426</td>
+					        <td>PLATE 1X1 - Black</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>14&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick57.png" /></td>
+					        <td>302421</td>
+					        <td>PLATE 1X1 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick46.png" /></td>
+					        <td>4122463</td>
+					        <td>PLATE 1X1 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>10&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick108.png" /></td>
+					        <td>302423</td>
+					        <td>PLATE 1X1 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick74.png" /></td>
+					        <td>302301</td>
+					        <td>PLATE 1X2 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick62.png" /></td>
+					        <td>302321</td>
+					        <td>PLATE 1X2 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>7&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick16.png" /></td>
+					        <td>4122464</td>
+					        <td>PLATE 1X2 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>26&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick58.png" /></td>
+					        <td>302323</td>
+					        <td>PLATE 1X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick28.png" /></td>
+					        <td>243123</td>
+					        <td>FLAT TILE 1X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick85.png" /></td>
+					        <td>306823</td>
+					        <td>FLAT TILE 2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick64.png" /></td>
+					        <td>362321</td>
+					        <td>PLATE 1X3 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick49.png" /></td>
+					        <td>4122465</td>
+					        <td>PLATE 1X3 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick75.png" /></td>
+					        <td>362323</td>
+					        <td>PLATE 1X3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick52.png" /></td>
+					        <td>242001</td>
+					        <td>CORNER PLATE 1X2X2 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick7.png" /></td>
+					        <td>4125264</td>
+					        <td>CORNER PLATE 1X2X2 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>7&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick68.png" /></td>
+					        <td>242023</td>
+					        <td>CORNER PLATE 1X2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick47.png" /></td>
+					        <td>302201</td>
+					        <td>PLATE 2X2 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick10.png" /></td>
+					        <td>3022106</td>
+					        <td>PLATE 2X2 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick110.png" /></td>
+					        <td>302224</td>
+					        <td>PLATE 2X2 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>11&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick32.png" /></td>
+					        <td>302223</td>
+					        <td>PLATE 2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick124.png" /></td>
+					        <td>371001</td>
+					        <td>PLATE 1X4 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick17.png" /></td>
+					        <td>4118782</td>
+					        <td>PLATE 1X4 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick26.png" /></td>
+					        <td>371023</td>
+					        <td>PLATE 1X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick36.png" /></td>
+					        <td>302121</td>
+					        <td>PLATE 2X3 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick27.png" /></td>
+					        <td>4125278</td>
+					        <td>PLATE 2X3 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick72.png" /></td>
+					        <td>302124</td>
+					        <td>PLATE 2X3 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>4&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick98.png" /></td>
+					        <td>302123</td>
+					        <td>PLATE 2X3 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick42.png" /></td>
+					        <td>366621</td>
+					        <td>PLATE 1X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick19.png" /></td>
+					        <td>3666106</td>
+					        <td>PLATE 1X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick43.png" /></td>
+					        <td>302001</td>
+					        <td>PLATE 2X4 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick65.png" /></td>
+					        <td>302021</td>
+					        <td>PLATE 2X4 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>16&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick11.png" /></td>
+					        <td>4122468</td>
+					        <td>PLATE 2X4 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick73.png" /></td>
+					        <td>302024</td>
+					        <td>PLATE 2X4 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>6&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick33.png" /></td>
+					        <td>302023</td>
+					        <td>PLATE 2X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick55.png" /></td>
+					        <td>346023</td>
+					        <td>PLATE 1X8 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick39.png" /></td>
+					        <td>4118786</td>
+					        <td>PLATE 1X10 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick8.png" /></td>
+					        <td>379521</td>
+					        <td>PLATE 2X6 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick29.png" /></td>
+					        <td>4121741</td>
+					        <td>PLATE 2X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick14.png" /></td>
+					        <td>4125266</td>
+					        <td>PLATE 4X4 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick121.png" /></td>
+					        <td>303123</td>
+					        <td>PLATE 4X4 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick9.png" /></td>
+					        <td>383221</td>
+					        <td>PLATE 2X10 - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick40.png" /></td>
+					        <td>4118902</td>
+					        <td>PLATE 2X10 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick1.png" /></td>
+					        <td>4125267</td>
+					        <td>PLATE 4X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick34.png" /></td>
+					        <td>4171472</td>
+					        <td>PLATE 4X8 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick2.png" /></td>
+					        <td>6052391</td>
+					        <td>PLATE 6X6 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick41.png" /></td>
+					        <td></td>
+					        <td>PLATE 4X10 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick37.png" /></td>
+					        <td></td>
+					        <td>PLATE 4X12 - Bright Orange</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>8&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick127.png" /></td>
+					        <td>4649422</td>
+					        <td>FLAT TILE 1X1, ROUND - Warm Gold</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick126.png" /></td>
+					        <td>614121</td>
+					        <td>PLATE 1X1 ROUND - Bright Red</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick130.png" /></td>
+					        <td>614124</td>
+					        <td>PLATE 1X1 ROUND - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>5&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick30.png" /></td>
+					        <td>614123</td>
+					        <td>PLATE 1X1 ROUND - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick128.png" /></td>
+					        <td>4523159</td>
+					        <td>PLATE 1X1 ROUND - Warm Gold</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick100.png" /></td>
+					        <td>4547649</td>
+					        <td>PL.ROUND 1X1 W. THROUGHG. HOLE - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>3&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick67.png" /></td>
+					        <td>265423</td>
+					        <td>SLIDE SHOE ROUND 2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick129.png" /></td>
+					        <td>403224</td>
+					        <td>PLATE 2X2 ROUND - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick106.png" /></td>
+					        <td>403223</td>
+					        <td>PLATE 2X2 ROUND - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick44.png" /></td>
+					        <td>415023</td>
+					        <td>FLAT TILE 2X2, ROUND - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick132.png" /></td>
+					        <td>4179587</td>
+					        <td>PARABOLIC REFLECTOR Ø24X6,4 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick81.png" /></td>
+					        <td>4185711</td>
+					        <td>ANGLE PLATE 1X2 / 2X2 - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick116.png" /></td>
+					        <td>4143005</td>
+					        <td>CONNECTOR PEG W. KNOB - Bright Blue</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick119.png" /></td>
+					        <td>4566177</td>
+					        <td>LIGHT SWORD - BLADE - Dark Green</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick117.png" /></td>
+					        <td>4222196</td>
+					        <td>STICK Ø 3.2 W. HOLDER - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick120.png" /></td>
+					        <td>472801</td>
+					        <td>FLOWER - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick113.png" /></td>
+					        <td>393724</td>
+					        <td>ROCKER BEARING 1X2 - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>2&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick114.png" /></td>
+					        <td>613424</td>
+					        <td>PLATE 2X2 (ROCKING) - Bright Yellow</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick101.png" /></td>
+					        <td>4568387</td>
+					        <td>Horn w. shaft ø 3.2 - White</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick111.png" /></td>
+					        <td></td>
+					        <td>DISH Ø24 - Warm Gold</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick118.png" /></td>
+					        <td>4222798</td>
+					        <td>HALBERD - Dark Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+
+				<div class="biElement">
+                    <table border="0">
+                        <tr style="vertical-align:middle">
+					        <td>1&nbsp;x</td>
+					        <td><img height="64" width="64" src="ganesha/Brick69.png" /></td>
+					        <td>4225169</td>
+					        <td>RAT - Medium Stone Grey</td>
+				        </tr>
+                    </table>
+                </div>
+
+
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="nav"  class="nav">
+            <table style="margin:0 auto" border="0">
+                <tr>
+                    <td><a onclick="biStep(0);" href="#"><img border="0" alt="First" src="ganesha/Images/Arrow_First.png" /></a></td>
+                    <td><a onclick="biStep(biCurStep-1);" href="#"><img border="0" alt="First" src="ganesha/Images/Arrow_Backward.png" /></a></td>
+                    <td><input id="stepNumber" onkeydown="returnTest(window.event)" type="text" style="text-align:center;width:56px;height:28px;border:1px solid #cccccc;font-size:14px;font-weight:bold" /></td>
+                    <td><a onclick="biStep(biCurStep+1);" href="#"><img border="0" alt="First" src="ganesha/Images/Arrow_Forward.png" /></a></td>
+                    <td><a onclick="biStep(144+1);" href="#"><img border="0" alt="First" src="ganesha/Images/Arrow_Last.png" /></a></td>
+                    <td style="width:40px">&nbsp;</td>
+                    <td><a onclick="window.print();return false;" href="#"><img border="0" alt="Print" src="ganesha/Images/PrintIcon.png" /></a></td>
+                </tr>
+            </table>
+        </div>
+		<div style="clear:both;">&nbsp;</div>
+		<div class="footer">© 2012 The LEGO Group. All rights reserved.<br />
+Use of the LEGO Digital Designer html print tool, signifies your agreement to the terms of use.</div>
+	</body>
+</html>
